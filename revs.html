@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DoctorCare - Отзывы</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.svg" alt="DoctorCare">
+                </a>
+                <nav class="menu">
+                    <button class="menu__btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="menu__list">
+                        <li class="menu__close">
+                            <button class="menu__close-btn">
+                                <img src="images/cancel_mark.svg" alt="">
+                            </button>
+                        </li>
+                        <li class="menu__item"><a href="appointment.html" class="menu__link">Записаться на приём</a></li>
+                        <li class="menu__item"><a href="goods.html">Услуги</a></li>
+                        <li class="menu__item"><a href="docs.html" class="menu__link">Врачи</a></li>
+                        <li class="menu__item"><a href="revs.html">Отзывы</a></li>
+                        <li class="menu__item"><a href="help.html" class="menu__link">Помощь</a></li>
+                    </ul>
+                </nav>
+                <ul class="user-actions">
+                    <li class="user-actions__item">
+                        <a class="user-actions__link" href="index.html#location">
+                            <img src="images/geo.svg" alt="Location">
+                        </a> 
+                    </li>
+                    <li class="user-actions__item user-actions__item-search">
+                        <a class="user-actions__link" href="#" id="search-icon">
+                          <img src="images/search.svg" alt="Search">
+                        </a> 
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="reviews">
+            <div class="reviews__content">
+                <h2 class="reviews__title">Отзывы</h2>
+                <div class="reviews__list">
+                    <div class="review-card">
+                        <h3>Валентина</h3>
+                        <p>Добрый день! Хочу поблагодарить персонал клиники за внимательность к хвостатым пациентам и их владельцам. Отдельное огромное спасибо Врачу Дмитрию Дмитриевичу Кузнецову за его профессионализм и внимательность.</p>
+                        <div class="review-card__footer">
+                            <div class="stars">★★★★★</div>
+                            <div class="date">08.08.2023</div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <h3>Алиса</h3>
+                        <p>Хочу поблагодарить Панкова Арсения Алексеевича. Грамотный специалист, очень спокойно и вежливо вел диалог со мной и со всей душой относился к моей Марусе. Сделали УЗИ, назначили лечение и необходимые анализы.</p>
+                        <div class="review-card__footer">
+                            <div class="stars">★★★★★</div>
+                            <div class="date">08.08.2023</div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <h3>Валентина</h3>
+                        <p>Добрый день. Наблюдаемся с кошкой Боней в этой клинике с 2018 года. Хорошая клиника. Внимательный персонал. Каждый год проходим вакцинацию.</p>
+                        <div class="review-card__footer">
+                            <div class="stars">★★★★★</div>
+                            <div class="date">26.08.2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__button">
+                <button id="open-review-modal">Оставить отзыв</button>
+            </div>
+        </section>
+    </main>
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Оставьте свой отзыв о клинике</h2>
+            <form class="review-form">
+                <label>Оцените клинику:</label>
+                <div class="stars-container">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="text" placeholder="Ваш номер телефона" required>
+                <input type="email" placeholder="Ваш E-mail" required>
+                <input type="text" placeholder="Кличка животного" required>
+                <textarea placeholder="Напишите качественно ли вас обслужили, посоветовали бы нашу клинику друзьям?" required></textarea>
+                <button type="submit">Отправить отзыв</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <img src="images/logo.svg" alt="DoctorCare">
+                    <p>&copy; 2024 - DoctorCare. Все права защищены.</p>
+                </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="appointment.html">Записаться на приём</a></li>
+                        <li><a href="goods.html">Услуги</a></li>
+                        <li><a href="docs.html">Врачи</a></li>
+                        <li><a href="revs.html">Отзывы</a></li>
+                        <li><a href="help.html">Помощь</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <p>Контакты</p>
+                    <p>Телефон: +7(909)123-45-67</p>
+                    <p>Email: info@doctorcare.ru</p>
+                    <p>Следите за нами:</p>
+                    <div class="footer__socials">
+                        <a href="index.html"><img src="images/instagram.svg" alt="Instagram"></a>
+                        <a href="index.html"><img src="images/vk.svg" alt="VK"></a>
+                        <a href="index.html"><img src="images/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <div class="search-overlay" id="search-overlay">
+      <div class="search-box">
+          <input type="text" id="search-input" placeholder="Введите запрос для поиска">
+          <button id="search-button">Найти</button>
+      </div>
+    </div>
+</body>
+</html>
